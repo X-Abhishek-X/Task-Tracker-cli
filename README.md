@@ -1,90 +1,83 @@
 # 📝 Task Tracker CLI
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-A robust command-line interface (CLI) tool to track and manage your daily tasks efficiently. Built with **Python** and zero external dependencies.
+A simple, dependency-free command-line interface (CLI) to track and manage daily tasks.
 
-> This project is part of the [roadmap.sh backend developer path](https://roadmap.sh/projects/task-tracker).
+This project is part of the [roadmap.sh backend developer path](https://roadmap.sh/projects/task-tracker).
 
 ---
 
 ## 🚀 Features
 
-| Feature | Description |
-| :--- | :--- |
-| **Add Tasks** | Quickly add new items to your todo list. |
-| **Track Status** | Mark items as `todo`, `in-progress`, or `done`. |
-| **Update & Delete** | Modify descriptions or remove tasks entirely. |
-| **Filter Views** | List all tasks or filter by specific status. |
-| **Persistent Storage** | Automatically saves data to a local `tasks.json` file. |
+- **Add Tasks:** Quickly add new items to your todo list.
+- **Track Status:** Mark items as `todo`, `in-progress`, or `done`.
+- **Update & Delete:** Modify descriptions or remove tasks entirely.
+- **Filter Views:** List all tasks or filter by specific status.
+- **Persistent Storage:** Saves data to a local `tasks.json` file.
 
 ---
 
 ## 🛠️ Installation & Setup
 
-You don't need to install any heavy libraries. Just clone and run!
+No external dependencies required — just Python 3.x.
 
-1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/X-Abhishek-X/Task-Tracker-cli.git](https://github.com/X-Abhishek-X/Task-Tracker-cli.git)
-Navigate to the folder
+1. Clone the repository:
 
+```powershell
+git clone https://github.com/X-Abhishek-X/Task-Tracker-cli.git
 cd Task-Tracker-cli
-Run the tracker
+```
 
-Bash
+2. Run the CLI (examples below assume `python` points to Python 3):
 
-python task_cli.py list
-💻 Usage Guide
-Here are the commands you can use to manage your tasks.
-
-1. Add a new task
-Bash
-
-python task_cli.py add "Buy groceries"
-# Output: Task added successfully (ID: 1)
-2. List tasks
-You can view all tasks or filter them by status.
-
-Bash
+```powershell
+# Show help / usage
+python task-cli.py --help
 
 # List all tasks
-python task_cli.py list
+python task-cli.py list
+```
 
-# List only 'done' tasks
-python task_cli.py list done
+---
 
-# List 'in-progress' tasks
-python task_cli.py list in-progress
-3. Update a task
-Updates the description of an existing task. (Replace 1 with your Task ID).
+## 💻 Usage Guide
 
-Bash
+Examples of common commands (replace IDs as needed):
 
-python task_cli.py update 1 "Buy groceries and cook dinner"
-4. Mark status
-Change the status of a task to keep track of progress.
+```powershell
+# Add a new task
+python task-cli.py add "Buy groceries"
 
-Bash
+# List all tasks
+python task-cli.py list
 
-# Mark as in-progress
-python task_cli.py mark-in-progress 1
+# List tasks by status (todo | in-progress | done)
+python task-cli.py list done
 
-# Mark as done
-python task_cli.py mark-done 1
-5. Delete a task
-Permanently remove a task from your list.
+# Update a task description (task ID 1)
+python task-cli.py update 1 "Buy groceries and cook dinner"
 
-Bash
+# Mark a task in-progress
+python task-cli.py mark-in-progress 1
 
-python task_cli.py delete 1
-📂 Project Structure
+# Mark a task done
+python task-cli.py mark-done 1
 
+# Delete a task
+python task-cli.py delete 1
+```
+
+---
+
+## 📂 Project Structure
+
+```
 Task-Tracker-cli/
-├── task_cli.py    # 🧠 Main application logic
-├── tasks.json     # 💾 Data storage (Auto-generated)
-├── .gitignore     # 🙈 Git ignore rules
-└── README.md      # 📄 Documentation
+├── task-cli.py    # Main application logic
+├── tasks.json     # Data storage (auto-generated)
+├── .gitignore
+└── README.md
+```
+
 Made with ❤️ by Abhishek Leji
