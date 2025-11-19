@@ -1,76 +1,110 @@
-\# Task Tracker CLI
+📝 Task Tracker CLI
+
+A robust command-line interface (CLI) tool to track and manage your daily tasks efficiently. Built with Python and zero external dependencies.
+
+This project is part of the roadmap.sh backend developer path.
+
+🚀 Features
+
+Feature
+
+Description
+
+Add Tasks
+
+Quickly add new items to your todo list.
+
+Track Status
+
+Mark items as todo, in-progress, or done.
+
+Update & Delete
+
+Modify descriptions or remove tasks entirely.
+
+Filter Views
+
+List all tasks or filter by specific status.
+
+Persistent Storage
+
+Automatically saves data to a local tasks.json file.
+
+🛠️ Installation & Setup
+
+You don't need to install any heavy libraries. Just clone and run!
+
+Clone the repository
+
+git clone [https://github.com/X-Abhishek-X/Task-Tracker-cli.git](https://github.com/X-Abhishek-X/Task-Tracker-cli.git)
 
 
+Navigate to the folder
 
-A simple command-line interface (CLI) to track and manage your tasks. This project is part of the \[roadmap.sh backend developer path](https://roadmap.sh/projects/task-tracker).
-
-
-
-\## Features
+cd Task-Tracker-cli
 
 
+Run the tracker
 
-\- Add, update, and delete tasks
-
-\- Mark tasks as in-progress or done
-
-\- List all tasks or filter by status (todo, done, in-progress)
-
-\- Data is stored in a local JSON file
+python task_cli.py list
 
 
+💻 Usage Guide
 
-\## Requirements
+Here are the commands you can use to manage your tasks.
 
+1. Add a new task
 
-
-\- Python 3 installed
-
-
-
-\## Usage
+python task_cli.py add "Buy groceries"
+# Output: Task added successfully (ID: 1)
 
 
+2. List tasks
 
-Run the script using Python from your terminal:
+You can view all tasks or filter them by status.
 
+# List all tasks
+python task_cli.py list
 
+# List only 'done' tasks
+python task_cli.py list done
 
-```bash
-
-\# Add a new task
-
-python task\_cli.py add "Buy groceries"
-
-
-
-\# List all tasks
-
-python task\_cli.py list
+# List 'in-progress' tasks
+python task_cli.py list in-progress
 
 
+3. Update a task
 
-\# List tasks by status
+Updates the description of an existing task. (Replace 1 with your Task ID).
 
-python task\_cli.py list done
-
-
-
-\# Update a task (replace 1 with your task ID)
-
-python task\_cli.py update 1 "Buy groceries and cook dinner"
+python task_cli.py update 1 "Buy groceries and cook dinner"
 
 
+4. Mark status
 
-\# Mark a task as in progress or done
+Change the status of a task to keep track of progress.
 
-python task\_cli.py mark-in-progress 1
+# Mark as in-progress
+python task_cli.py mark-in-progress 1
 
-python task\_cli.py mark-done 1
+# Mark as done
+python task_cli.py mark-done 1
 
 
+5. Delete a task
 
-\# Delete a task
+Permanently remove a task from your list.
 
-python task\_cli.py delete 1
+python task_cli.py delete 1
 
+
+📂 Project Structure
+
+Task-Tracker-cli/
+├── task_cli.py    # 🧠 Main application logic
+├── tasks.json     # 💾 Data storage (Auto-generated)
+├── .gitignore     # 🙈 Git ignore rules
+└── README.md      # 📄 Documentation
+
+
+Made with ❤️ by Abhishek Leji
